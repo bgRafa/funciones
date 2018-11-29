@@ -27,3 +27,22 @@ function cargaListas(lista, coleccion) {
  }
 
 }
+function borraParrafo(nodo) {
+
+    var nodoPadre = nodo.parentNode;
+    nodoPadre.parentNode.parentNode.removeChild(nodoPadre.parentNode);
+
+}
+
+        /**
+             * Funcion para quitar todas las opciones menos la primera de un combo
+             * 
+             * @param {type} selectbox
+             * @returns {undefined}
+             */
+            function removeOptions(selectbox) {
+                var i;
+                for (i = selectbox.options.length - 1; i >= 1; i--) {
+                    selectbox.remove(i);
+                }
+            }
